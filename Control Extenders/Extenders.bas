@@ -24,7 +24,7 @@ Private Declare Function SendMessageA Lib "User32.dll" (ByVal hwnd As Long, ByVa
 
 
 'The constants and structures used by this program.
-Public Const AllItems As Long = -1   'Indicates that all items in a combo/list box are to be searched.
+Public Const ALL_ITEMS As Long = -1   'Indicates that all items in a combo/list box are to be searched.
 
 'This structure defines information about the lines in a text box.
 Public Type TextLinesStr
@@ -84,7 +84,7 @@ End Sub
 
 
 'This procedure returns index of the item containing the specified text in the specified combobox.
-Public Function SearchComboBox(ComboBoxO As ComboBox, Text As String, Optional StartIndex As Long = AllItems, Optional AllText As Boolean = False) As Long
+Public Function SearchComboBox(ComboBoxO As ComboBox, Text As String, Optional StartIndex As Long = ALL_ITEMS, Optional AllText As Boolean = False) As Long
 Dim Index As Long
 Dim SearchType As Long
 
@@ -96,7 +96,7 @@ End Function
 
 
 'This procedure returns index of the item containing the specified text in the specified listbox.
-Public Function SearchListBox(ListBoxO As ListBox, Text As String, Optional StartIndex As Long = AllItems, Optional AllText As Boolean = False) As Long
+Public Function SearchListBox(ListBoxO As ListBox, Text As String, Optional StartIndex As Long = ALL_ITEMS, Optional AllText As Boolean = False) As Long
 Dim Index As Long
 Dim SearchType As Long
 
